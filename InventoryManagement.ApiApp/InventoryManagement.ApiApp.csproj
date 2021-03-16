@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <AssemblyName>InventoryManagement.ApiApp</AssemblyName>
+    <RootNamespace>InventoryManagement.ApiApp</RootNamespace>
+  </PropertyGroup>
+
+</Project>
