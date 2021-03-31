@@ -3,20 +3,20 @@ namespace InventoryManagement.ApiApp.Models
     /// <summary>
     /// This represents the factory city entity.
     /// </summary>
-    public class FactoryCity
+    public class WarehouseCity
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FactoryCity" /> class.
+        /// Initializes a new instance of the <see cref="WarehouseCity" /> class.
         /// </summary>
-        public FactoryCity()
+        public WarehouseCity()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FactoryCity" /> class.
+        /// Initializes a new instance of the <see cref="WarehouseCity" /> class.
         /// </summary>
         /// <param name="cityName">City name.</param>
-        public FactoryCity(string cityName)
+        public WarehouseCity(string cityName)
         {
             this.CityName = cityName;
         }
