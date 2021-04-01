@@ -11,10 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-/* === using directive BEGIN === */
-using Microsoft.OpenApi.Models;
-/* === using directive END === */
-
 namespace InventoryManagement.ApiApp
 {
     public class Startup
@@ -31,28 +27,11 @@ namespace InventoryManagement.ApiApp
         {
 
             services.AddControllers();
-
-            /* === SwaggerGen BEGIN === */
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Inventory Management", Version = "v1" });
-            });
-            /* === SwaggerGen END === */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            /* === SwaggerUI BEGIN === */
-            app.UseSwagger(c =>
-            {
-                c.PreSerializeFilters.Add((swagger, httpReq) => {
-                    swagger.Servers = new List<OpenApiServer>() { new OpenApiServer() { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}" } };
-                });
-            });
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InventoryManagement.ApiApp v1"));
-            /* === SwaggerUI END === */
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
