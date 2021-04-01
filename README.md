@@ -47,6 +47,11 @@ To provision resources to Azure and deploy ASP.NET Core Web API, follow the step
     ./setup.sh
     ```
 
+   Alternatively, run the PowerShell script.
+
+    ```powershell
+    ./Setup.ps1
+    ```
 
 [az account free]: https://azure.microsoft.com/free?WT.mc_id=github-0000-juyoo
 [az cli install]: https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=github-0000-juyoo
